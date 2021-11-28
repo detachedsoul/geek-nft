@@ -1,0 +1,59 @@
+@tailwind base;
+
+@layer base {
+
+    ::selection {
+        @apply bg-dark-blue text-white
+    }
+
+    input[type="search"]::-webkit-search-decoration,
+    input[type="search"]::-webkit-search-cancel-button,
+    input[type="search"]::-webkit-search-results-button,
+    input[type="search"]::-webkit-search-results-decoration {
+        @apply appearance-none
+    }
+
+    input,
+    input:focus,
+    button,
+    button:focus,
+    textarea,
+    textarea:focus {
+        @apply border-none outline-none rounded-none
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-poppins
+    }
+
+    .custom-scrollbar {
+        scrollbar-width: thin; 
+        -ms-overflow-style: thin;
+        scrollbar-color: rgba(243, 244, 246, 1) #abb7de;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+        @apply w-1 h-1.5
+    }
+
+    .custom-scrollbar::-webkit-scrollbar:vertical {
+        @apply h-3 w-2
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-track {
+        @apply rounded-md bg-gray-100
+    }
+ 
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        @apply bg-clip-content box-border bg-main border-4 border-transparent rounded-md
+    }
+
+}
+
+@tailwind components;
+@tailwind utilities;
